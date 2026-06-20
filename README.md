@@ -55,23 +55,3 @@ Findings print to the console and are also written to `findings.json`.
 - **Public exposure** — flags security group or S3 ACL/policy changes that
   introduce `0.0.0.0/0` or public-read access.
 
-## Next steps for the full write-up
-
-- [ ] Add an executive summary paragraph (who, what, when, business impact)
-- [ ] Add a timeline diagram/visual of the attack chain
-- [ ] Add a remediation section per finding (e.g. SCP to block `StopLogging`,
-      least-privilege IAM boundary policies, MFA enforcement on console login)
-- [ ] Screenshot the console output / findings.json as evidence
-- [ ] (Optional) Re-run against real CloudTrail logs from a sandbox AWS account
-      once cost is no longer a concern, to validate the rules against live data
-- [ ] Wire `findings.json` into the existing AWS Cloud Guardrail Streamlit
-      dashboard so posture findings and threat-hunting findings live in one place
-
-## Resume bullets
-
-- Built a cloud threat detection engine simulating a six-stage adversary
-  compromise (initial access through impact) in AWS, with custom hunting
-  logic across CloudTrail events mapped to MITRE ATT&CK for Cloud.
-- Engineered detection rules for privilege escalation chains, impossible
-  travel, defense evasion, and persistence, achieving full detection
-  coverage against a simulated attack scenario.
